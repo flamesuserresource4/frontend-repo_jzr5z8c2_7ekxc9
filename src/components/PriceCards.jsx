@@ -18,7 +18,7 @@ const items = [
     title: 'Price Trend',
     value: 'Stable',
     change: 'Last 6 months',
-    icon: <LineChart className="text-orange-600" />,
+    icon: <LineChart className="text-orange-500" />,
   },
 ];
 
@@ -27,13 +27,13 @@ const PriceCards = () => {
     <section className="mx-auto max-w-7xl px-6 pb-16">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {items.map((it) => (
-          <div key={it.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div key={it.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-slate-900">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium text-slate-600">{it.title}</h3>
+              <h3 className="text-sm font-medium text-slate-600 dark:text-slate-300">{it.title}</h3>
               {it.icon}
             </div>
-            <div className="mt-3 text-2xl font-semibold text-slate-900">{it.value}</div>
-            <div className="mt-1 text-xs text-slate-500">{it.change}</div>
+            <div className="mt-3 text-2xl font-semibold text-slate-900 dark:text-slate-100">{it.value}</div>
+            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{it.change}</div>
           </div>
         ))}
       </div>

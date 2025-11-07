@@ -4,15 +4,15 @@ import { Home, TrendingUp, MapPin } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[560px] overflow-hidden bg-slate-950 text-white">
+    <section className="relative w-full min-h-[560px] overflow-hidden bg-slate-900 text-white dark:bg-black">
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/1VHYoewWfi45VYZ5/scene.splinecode"
+          scene="https://prod.spline.design/O-AdlP9lTPNz-i8a/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 pt-20 pb-16 md:pt-28">
         <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
@@ -22,7 +22,7 @@ const Hero = () => {
         <h1 className="mt-5 text-center text-3xl font-semibold leading-tight md:text-5xl">
           Find your perfect home with live prices & trends
         </h1>
-        <p className="mt-4 max-w-2xl text-center text-sm text-white/80 md:text-base">
+        <p className="mt-4 max-w-2xl text-center text-sm text-white/85 md:text-base">
           Explore locality-wise price per sq.ft, rentals, and compare neighborhoods like a pro.
         </p>
 

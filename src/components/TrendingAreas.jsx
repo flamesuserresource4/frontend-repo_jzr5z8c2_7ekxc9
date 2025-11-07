@@ -12,8 +12,8 @@ const TrendingAreas = ({ onSelect }) => {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-slate-900">
-          <Flame className="text-orange-600" />
+        <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100">
+          <Flame className="text-orange-500" />
           <h2 className="text-xl font-semibold">Trending Localities</h2>
         </div>
         <button className="text-sm font-medium text-indigo-600 hover:underline">View all</button>
@@ -24,29 +24,29 @@ const TrendingAreas = ({ onSelect }) => {
           <button
             key={a.name}
             onClick={() => onSelect?.(a.name)}
-            className="group rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:shadow-lg"
+            className="group rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:shadow-lg dark:border-white/10 dark:bg-slate-900"
           >
             <div className="flex items-start justify-between">
               <div>
-                <div className="flex items-center gap-2 text-slate-700"><MapPin size={16}/> {a.city}</div>
-                <h3 className="mt-1 text-lg font-semibold text-slate-900">{a.name}</h3>
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300"><MapPin size={16}/> {a.city}</div>
+                <h3 className="mt-1 text-lg font-semibold text-slate-900 dark:text-white">{a.name}</h3>
               </div>
-              <span className="rounded-full bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700">Hot</span>
+              <span className="rounded-full bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 dark:bg-orange-500/10 dark:text-orange-400">Hot</span>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-              <div className="rounded-xl bg-slate-50 p-3">
-                <div className="text-slate-500">Price / sq.ft</div>
-                <div className="text-slate-900">₹{a.price.toLocaleString()}</div>
+              <div className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
+                <div className="text-slate-500 dark:text-slate-400">Price / sq.ft</div>
+                <div className="text-slate-900 dark:text-slate-100">₹{a.price.toLocaleString()}</div>
               </div>
-              <div className="rounded-xl bg-slate-50 p-3">
-                <div className="text-slate-500">Avg Rent (₹/sq.ft)</div>
-                <div className="text-slate-900">₹{a.rent}</div>
+              <div className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
+                <div className="text-slate-500 dark:text-slate-400">Avg Rent (₹/sq.ft)</div>
+                <div className="text-slate-900 dark:text-slate-100">₹{a.rent}</div>
               </div>
             </div>
-            <div className="mt-3 inline-flex items-center gap-1 text-emerald-600">
+            <div className="mt-3 inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
               <TrendingUp size={16} /> {a.trend}% last 12m
             </div>
-            <div className="mt-4 h-1 w-full rounded-full bg-slate-100">
+            <div className="mt-4 h-1 w-full rounded-full bg-slate-100 dark:bg-slate-800">
               <div className="h-1 rounded-full bg-indigo-600 transition-all group-hover:bg-indigo-700" style={{ width: `${Math.min(100, a.trend * 10)}%` }} />
             </div>
           </button>
